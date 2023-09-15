@@ -2,19 +2,19 @@ import os
 import shutil
 import random
 
-diretorio_raiz = "/home/lucasleite/Todas as Classes/Insetos" # Diretório raiz onde estão as pastas originais
+diretorio_raiz = "Simplificado" # Diretório raiz onde estão as pastas originais
 
 # Pastas originais
 # Retorna de forma automática as pastas originais de diretorio raiz
 pastas_originais = [nome for nome in os.listdir(diretorio_raiz) if os.path.isdir(os.path.join(diretorio_raiz, nome))]
 
 # Porcentagem de imagens para treinamento
-porcentagem_treino = 0.8
+porcentagem_treino = 0.9
 
 for pasta in pastas_originais:
     pasta_origem = os.path.join(diretorio_raiz, pasta)
-    pasta_destino_treino = os.path.join(diretorio_raiz, "Treino", pasta)
-    pasta_destino_teste = os.path.join(diretorio_raiz, "Teste", pasta)
+    pasta_destino_treino = os.path.join(diretorio_raiz, "Treino-S", pasta)
+    pasta_destino_teste = os.path.join(diretorio_raiz, "Teste-S", pasta)
 
     # Criamos as pastas de treinamento e teste
     os.makedirs(pasta_destino_treino, exist_ok=True)
